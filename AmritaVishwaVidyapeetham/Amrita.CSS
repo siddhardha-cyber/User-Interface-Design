@@ -1,0 +1,36 @@
+.navigation
+{
+    width: 100%;
+    overflow: hidden;
+}
+.navigation ul 
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    display: flex;
+    justify-content: center; /* centers horizontally */
+}
+.navigation li 
+{
+    padding: 16px;
+}
+.navigation li a 
+{
+    color: white;
+    text-decoration: none;
+}
+h1 
+{
+    text-align: center;
+}
+p
+{
+    text-align: center;
+}
+img 
+{
+    display: block;
+    margin: auto;
+}

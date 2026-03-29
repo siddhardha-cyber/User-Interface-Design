@@ -1,0 +1,168 @@
+<style>
+        .header
+    {
+        background: #1e90ff;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .banner
+    {
+        background: orange;
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+    }
+
+    .grid-container
+    {
+        display: grid;
+        grid-template-columns: 250px 1fr; /* sidebar + content */
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .sidebar
+    {
+        background: #f4f4f4;
+        padding: 15px;
+        border: 1px solid #ccc;
+    }
+
+    .sidebar ul
+    {
+        list-style: none;
+        padding: 0;
+    }
+
+    .sidebar ul li
+    {
+        margin: 10px 0;
+        cursor: pointer;
+    }
+
+    .content
+    {
+        background: #fff;
+        padding: 15px;
+        border: 1px solid #ccc;
+    }
+
+    .products
+    {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .product
+    {
+        border: 1px solid #ddd;
+        padding: 15px;
+        text-align: center;
+        background: #fafafa;
+    }
+
+    .product img
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    button
+    {
+        background: #1e90ff;
+        color: white;
+        border: none;
+        padding: 10px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    button:hover
+    {
+        background: #005cbf;
+    }
+
+    .footer
+    {
+        text-align: center;
+        background: #333;
+        color: white;
+        padding: 15px;
+        margin-top: 20px;
+    }
+    @media (max-width: 768px)
+    {
+        .grid-container
+        {
+            grid-template-columns: 1fr;
+        }
+        .sidebar
+        {
+            order: 2;
+        }
+    }
+
+</style>
+<div class="header">
+    <h1>My E-Commerce Store</h1>
+    <div class="banner">Big Sale! Up to 50% Off</div>
+  </div>
+  <div class="grid-container">
+    <div class="sidebar">
+      <h2>Categories</h2>
+      <ul>
+        <li><a href="Electronics.HTML">Electronics</a></li>
+        <li><a href="Clothing.HTML">Clothing</a></li>
+        <li><a href="HomeAppliances.HTML">Home Appliances</a></li>
+        <li><a href="Books.HTML">Books</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="products">
+    <div class="product">
+        <h4>Alienware 18 Area-51 Gaming Laptop</h4>
+        <img src="https://dellstatic.luroconnect.com/media/catalog/product/cache/74ae05ef3745aec30d7f5a287debd7f5/a/w/aw_18_area_51_2.png">
+        <p>Intel® Core Ultra 9 processor 275HX (24-Core, 36MB Total Cache, 2.7GHz to 5.4GHz)</p>
+        <button onclick="document.location='https://www.dellstore.com/alienware-18-area-51-gaming-laptop-can18250cto03mino.html'">View More</button>
+    </div>
+    <div class="product">
+        <h4>Alienware Area-51 Gaming Desktop</h4>
+        <img src="https://dellstatic.luroconnect.com/media/catalog/product/cache/74ae05ef3745aec30d7f5a287debd7f5/c/a/cadr8cto02rin_new_1_1.png">
+        <p>Intel® Core™ Ultra 9 285K processor (24-Core, 76MB Total Cache, 3.7GHz to 5.7GHz)</p>
+        <button onclick="document.location='https://www.dellstore.com/alienware-area-51-gaming-desktop-cadr8cto03rin.html'">View More</button>
+    </div>
+    <div class="product">
+        <h4>ALIENWARE 27 360HZ QD-OLED GAMING MONITOR - AW2725DF</h4>
+        <img src="https://dellstatic.luroconnect.com/media/catalog/product/cache/74ae05ef3745aec30d7f5a287debd7f5/a/w/aw2725df_n.png">
+        <p>2560 X 1440 at 360Hz (Native with DisplayPort), 2560 X 1440 at 144Hz (Native with HDMI)</p>
+        <button onclick="document.location='https://www.dellstore.com/alienware-27-360hz-qd-oled-gaming-monitor-aw2725df.html'">View More</button>
+    </div>
+</div>
+<div class="products">
+    <div class="product">
+        <h4>ALIENWARE WIRELESS GAMING MOUSE AW620M</h4>
+        <img src="https://dellstatic.luroconnect.com/media/catalog/product/cache/74ae05ef3745aec30d7f5a287debd7f5/m/o/mouse-alienware-aw620m-black-gallery-1.jpg">
+        <p>Wireless, wired</p>
+        <button onclick="document.location='https://www.dellstore.com/alienware-wireless-gaming-mouse-aw620m.html'">View More</button>
+    </div>
+    <div class="product">
+        <h4>ALIENWARE TRI-MODE WIRELESS GAMING KEYBOARD - AW920K</h4>
+        <img src="https://dellstatic.luroconnect.com/media/catalog/product/cache/74ae05ef3745aec30d7f5a287debd7f5/k/e/keyboard-alienware-aw920k-black-gallery-2.jpg">
+        <p>Wireless, wired</p>
+        <button onclick="document.location='https://www.dellstore.com/alienware-tri-mode-wireless-gaming-keyboard-aw920k-580-bbhd.html'">View More</button>
+    </div>
+    <div class="product">
+        <h4>Alienware Tri-Mode Wireless Gaming Headset AW920H - Lunar Light</h4>
+        <img src="https://dellstatic.luroconnect.com/media/catalog/product/cache/74ae05ef3745aec30d7f5a287debd7f5/5/2/520-aawq_1.jpg">
+        <p>40mm</p>
+        <button onclick="document.location='https://www.dellstore.com/alienware-tri-mode-wireless-gaming-headset-aw920h-lunar-light.html'">View More</button>
+    </div>
+</div>
+    </div>
+  </div>
+  <div class="footer">
+    © 2026 My E-Commerce Store | All Rights Reserved
+  </div>

@@ -1,0 +1,148 @@
+<style>
+        .header
+    {
+        background: #1e90ff;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .banner
+    {
+        background: orange;
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+    }
+
+    .grid-container
+    {
+        display: grid;
+        grid-template-columns: 250px 1fr; /* sidebar + content */
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .sidebar
+    {
+        background: #f4f4f4;
+        padding: 15px;
+        border: 1px solid #ccc;
+    }
+
+    .sidebar ul
+    {
+        list-style: none;
+        padding: 0;
+    }
+
+    .sidebar ul li
+    {
+        margin: 10px 0;
+        cursor: pointer;
+    }
+
+    .content
+    {
+        background: #fff;
+        padding: 15px;
+        border: 1px solid #ccc;
+    }
+
+    .products
+    {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .product
+    {
+        border: 1px solid #ddd;
+        padding: 15px;
+        text-align: center;
+        background: #fafafa;
+    }
+
+    .product img
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    button
+    {
+        background: #1e90ff;
+        color: white;
+        border: none;
+        padding: 10px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    button:hover
+    {
+        background: #005cbf;
+    }
+
+    .footer
+    {
+        text-align: center;
+        background: #333;
+        color: white;
+        padding: 15px;
+        margin-top: 20px;
+    }
+    @media (max-width: 768px)
+    {
+        .grid-container
+        {
+            grid-template-columns: 1fr;
+        }
+        .sidebar
+        {
+            order: 2;
+        }
+    }
+
+</style>
+<div class="header">
+    <h1>My E-Commerce Store</h1>
+    <div class="banner">Big Sale! Up to 50% Off</div>
+</div>
+  <div class="grid-container">
+    <div class="sidebar">
+      <h2>Categories</h2>
+      <ul>
+        <li><a href="Electronics.HTML">Electronics</a></li>
+        <li><a href="Clothing.HTML">Clothing</a></li>
+        <li><a href="HomeAppliances.HTML">Home Appliances</a></li>
+        <li><a href="Books.HTML">Books</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="products">
+    <div class="product">
+        <h4>The Alchemist</h4>
+        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS-u88pyzssm14o4s5TNWt4whT0mFaQKJTRjtZYDVxTcDg8Ss3tj_KRuri4lG43VpOhs7YL2t5KxIRRcVb-ixf6ue81qzXLITr5Ghpp0rdgrFRJa-CTigKPcB8">
+        <p>Paulo Coelho’s enchanting novel has inspired a devoted following around the world.</p>
+        <button onclick="document.location='https://adorebooks.in/product/the-alchemist/'">View More</button>
+    </div>
+    <div class="product">
+        <h4>WINGS OF FIRE AN AUTOBIOGRAPHY</h4>
+        <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQbnYE-WQ_JKV-QHKJGuCbZyBWkbSGiZ3XNHifSV6OrT1fJGnA9iR3T53LgZXdgtPuca9nHISt1ZPv3LilPZ9VGx18RC3cHTJFjIUa7iP41csHvgPItGSSp">
+        <p>In this book, the former president shares his personal experiences and minutest details of his life.</p>
+        <button onclick="document.location='https://www.amazon.in/WINGS-FIRE-KALAM-ABDUL/dp/B01BITNP8U?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A4UNY0LSJXNDY'">View More</button>
+    </div>
+    <div class="product">
+        <h4>The Power of Your Subconscious Mind</h4>
+        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRGKKIR6xhOcsSt3oa9MqCWY17GLKoHBbgo1mlbioHQaSfC3eBrGDrre6b3CMbnWdx2-3T937xT7cqJW185vIDodXoSldgbf-SgLODSmlTCAtSKAkbOPZKU">
+        <p>This remarkable book by Dr. Joseph Murphy, one of the pioneering voices of affirmative thinking, will unlock for you the truly staggering powers of your subconscious mind.</p>
+        <button onclick="document.location='https://www.versoz.com/products/9geqp8au1jx5?variant=46464236716282&country=IN&currency=INR&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&srsltid=AfmBOoqFixogD2rUYgcheGArijYFJyHavTEOTyxB9HFAeTm8csksRk7pZF0'">View More</button>
+    </div>
+</div>
+</div>
+</div>
+  <div class="footer">
+    © 2026 My E-Commerce Store | All Rights Reserved
+  </div>

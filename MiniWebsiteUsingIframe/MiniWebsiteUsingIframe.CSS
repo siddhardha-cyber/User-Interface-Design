@@ -1,0 +1,116 @@
+.name h3
+{
+    text-align: center;
+}
+.heading h1
+{
+    text-align: center;
+    background-color: lawngreen;
+    color: red;
+}
+.card-container
+{
+    display: flex;
+    gap: 10px;
+}
+.card1
+{
+    width: 33%;
+    border: 2px solid black;
+    text-align: center;
+}
+.card2
+{
+    width: 33%;
+    border: 2px solid black;
+    text-align: center;
+}
+.card3
+{
+    width: 33%;
+    border: 2px solid black;
+    text-align: center;
+}
+img 
+{
+    width: 100%;
+}
+.navigation
+{
+    width: 100%;
+    overflow: hidden;
+}
+.navigation ul 
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    display: flex;
+    justify-content: center; /* centers horizontally */
+}
+.navigation li 
+{
+    padding: 16px;
+}
+.navigation li a 
+{
+    color: white;
+    text-decoration: none;
+}
+.aboutus
+{
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.aboutus p
+{
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+}
+h2 
+{
+    color: darkblue;
+    text-align: center;
+}
+.contact-box
+{
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+input, textarea 
+{
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+button 
+{
+    margin-top: 15px;
+    background-color: blue;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover 
+{
+    background-color: darkblue;
+}

@@ -1,0 +1,148 @@
+<style>
+        .header
+    {
+        background: #1e90ff;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .banner
+    {
+        background: orange;
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+    }
+
+    .grid-container
+    {
+        display: grid;
+        grid-template-columns: 250px 1fr; /* sidebar + content */
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .sidebar
+    {
+        background: #f4f4f4;
+        padding: 15px;
+        border: 1px solid #ccc;
+    }
+
+    .sidebar ul
+    {
+        list-style: none;
+        padding: 0;
+    }
+
+    .sidebar ul li
+    {
+        margin: 10px 0;
+        cursor: pointer;
+    }
+
+    .content
+    {
+        background: #fff;
+        padding: 15px;
+        border: 1px solid #ccc;
+    }
+
+    .products
+    {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .product
+    {
+        border: 1px solid #ddd;
+        padding: 15px;
+        text-align: center;
+        background: #fafafa;
+    }
+
+    .product img
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    button
+    {
+        background: #1e90ff;
+        color: white;
+        border: none;
+        padding: 10px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    button:hover
+    {
+        background: #005cbf;
+    }
+
+    .footer
+    {
+        text-align: center;
+        background: #333;
+        color: white;
+        padding: 15px;
+        margin-top: 20px;
+    }
+    @media (max-width: 768px)
+    {
+        .grid-container
+        {
+            grid-template-columns: 1fr;
+        }
+        .sidebar
+        {
+            order: 2;
+        }
+    }
+
+</style>
+<div class="header">
+    <h1>My E-Commerce Store</h1>
+    <div class="banner">Big Sale! Up to 50% Off</div>
+</div>
+  <div class="grid-container">
+    <div class="sidebar">
+      <h2>Categories</h2>
+      <ul>
+        <li><a href="Electronics.HTML">Electronics</a></li>
+        <li><a href="Clothing.HTML">Clothing</a></li>
+        <li><a href="HomeAppliances.HTML">Home Appliances</a></li>
+        <li><a href="Books.HTML">Books</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="products">
+    <div class="product">
+        <h4>ANike Stride</h4>
+        <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/1/c/1c9034cNike-HV2181-440_2.jpg?rnd=20200526195200&tr=w-720">
+        <p>Men's Dri-FIT 1/4-Zip Running Top</p>
+        <button onclick="document.location='https://www.nike.in/nike-stride-men-s-dri-fit-1-4-zip-running-top/p/24829699'">View More</button>
+    </div>
+    <div class="product">
+        <h4>Nike Pro Training</h4>
+        <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/5/3/5324c8eNike-HV0410-360_1.jpg?rnd=20200526195200&tr=w-900">
+        <p>Men's Dri-FIT Short-Sleeve Top</p>
+        <button onclick="document.location='https://www.nike.in/nike-pro-training-men-s-dri-fit-short-sleeve-top/p/24829693'">View More</button>
+    </div>
+    <div class="product">
+        <h4>Sabrina 'Put In Work'</h4>
+        <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/5/3/5324c8eNike-IO4239-010_1.jpg?rnd=20200526195200&tr=w-900">
+        <p>Nike Dri-FIT Basketball T-Shirt</p>
+        <button onclick="document.location='https://www.nike.in/nike-sabrina-put-in-work-dri-fit-basketball-t-shirt/p/24786420'">View More</button>
+    </div>
+</div>
+</div>
+</div>
+  <div class="footer">
+    © 2026 My E-Commerce Store | All Rights Reserved
+  </div>

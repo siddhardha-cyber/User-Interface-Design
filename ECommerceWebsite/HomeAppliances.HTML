@@ -1,0 +1,148 @@
+<style>
+        .header
+    {
+        background: #1e90ff;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .banner
+    {
+        background: orange;
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+    }
+
+    .grid-container
+    {
+        display: grid;
+        grid-template-columns: 250px 1fr; /* sidebar + content */
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .sidebar
+    {
+        background: #f4f4f4;
+        padding: 15px;
+        border: 1px solid #ccc;
+    }
+
+    .sidebar ul
+    {
+        list-style: none;
+        padding: 0;
+    }
+
+    .sidebar ul li
+    {
+        margin: 10px 0;
+        cursor: pointer;
+    }
+
+    .content
+    {
+        background: #fff;
+        padding: 15px;
+        border: 1px solid #ccc;
+    }
+
+    .products
+    {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .product
+    {
+        border: 1px solid #ddd;
+        padding: 15px;
+        text-align: center;
+        background: #fafafa;
+    }
+
+    .product img
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    button
+    {
+        background: #1e90ff;
+        color: white;
+        border: none;
+        padding: 10px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    button:hover
+    {
+        background: #005cbf;
+    }
+
+    .footer
+    {
+        text-align: center;
+        background: #333;
+        color: white;
+        padding: 15px;
+        margin-top: 20px;
+    }
+    @media (max-width: 768px)
+    {
+        .grid-container
+        {
+            grid-template-columns: 1fr;
+        }
+        .sidebar
+        {
+            order: 2;
+        }
+    }
+
+</style>
+<div class="header">
+    <h1>My E-Commerce Store</h1>
+    <div class="banner">Big Sale! Up to 50% Off</div>
+</div>
+  <div class="grid-container">
+    <div class="sidebar">
+      <h2>Categories</h2>
+      <ul>
+        <li><a href="Electronics.HTML">Electronics</a></li>
+        <li><a href="Clothing.HTML">Clothing</a></li>
+        <li><a href="HomeAppliances.HTML">Home Appliances</a></li>
+        <li><a href="Books.HTML">Books</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="products">
+    <div class="product">
+        <h4>XGen Pro Gaming Chair</h4>
+        <img src="https://thesleepcompany.in/cdn/shop/files/XGEN_Pro_desktop_Red_1_38fa35c9-913c-49b0-b849-41a9c4ff416f.webp?v=1774005549&width=1400">
+        <p>The Sleep Company XGen Pro Gaming Chair</p>
+        <button onclick="document.location='https://thesleepcompany.in/products/xgen-pro-gaming-chair?variant=47162616545509&utm_source=google&utm_campaign=&utm_medium=cpc&utm_content=&utm_term=&gad_source=1&gad_campaignid=21469370330&gbraid=0AAAAACqksBSnIxLxSeFDLg9JyqJeSk1NS&gclid=Cj0KCQjwm6POBhCrARIsAIG58CJXZ6KqCoueT61IXDp6NDykv6OtfwFMj7h6ghauWaWwBcDDKiWTqi0aAhskEALw_wcB'">View More</button>
+    </div>
+    <div class="product">
+        <h4>Mitsubishi</h4>
+        <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/air-conditioner-new/4/a/u/-original-imahgnpreyftgwse.jpeg?q=80">
+        <p>MSZ-HP24VA | 2 TR</p>
+        <button onclick="document.location='https://mitsubishielectric.in/products/air-conditioning-systems/split-air-conditioners/inverter-winter-and-summer-series/msz-hp24va'">View More</button>
+    </div>
+    <div class="product">
+        <h4>Atomberg Water Purifier</h4>
+        <img src="https://media.atomberg.com/cdn-cgi/image/width=1200,quality=90,format=auto/media/catalog/product/w/p/wp_pli_08_jan_1_.png">
+        <p>Atomberg Intellon - India’s 1st Adaptive Water Purifier* | RO+UF+UV+Alkaliser | Superior Filter Life | 4 Modes | TDS-Based Filtration | Smart IoT Enabled | 7 Stages | Retains Minerals & Improves Health |8L| 2 Year Warranty | No AMC</p>
+        <button onclick="document.location='https://atomberg.com/intellon-waterpurifier?utm_source=google&utm_medium=paid&utm_campaign=ET-MG-Perf-054-TOF-Search-Brand-Pan-India&utm_term=ET-MG-054-A01-Search-Brand&utm_content=&gad_source=1&gad_campaignid=23024914510&gbraid=0AAAAADgjttiv_SkwsWKi1k7qCa5UPZnoL&gclid=Cj0KCQjwm6POBhCrARIsAIG58CLlWlotVY5LHCxfSi2lJ-2G8dO-DeSXXxSJwhoYRY3iN4DVnB4lGnEaAsW2EALw_wcB'">View More</button>
+    </div>
+</div>
+</div>
+</div>
+  <div class="footer">
+    © 2026 My E-Commerce Store | All Rights Reserved
+  </div>
