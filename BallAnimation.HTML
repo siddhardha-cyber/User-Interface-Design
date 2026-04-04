@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bouncing Ball</title>
+        <style>
+            body
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: #f0f0f0;
+            }
+            .ball
+            {
+                width: 100px;
+                height: 100px;
+                background-color: crimson;
+                border-radius: 50%;
+                position: relative;
+                animation: bounce 2s ease-in-out infinite;
+            }
+            @keyframes bounce
+            {
+                0%
+                {
+                    transform: translateY(0);
+                }
+                50%
+                {
+                    transform: translateY(-150px);
+                }
+                100%
+                {
+                    transform: translateY(0);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="ball"></div>
+    </body>
+</html>
