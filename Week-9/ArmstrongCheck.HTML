@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Armstrong Number Checker</title>
+    </head>
+    <body>
+        <h2>Check Armstrong Number</h2>
+        <p>Type one number:</p>
+        <input id="number" type="text">
+        <br><br>
+        <button onclick="checkArmstrong()">Check</button>
+        <iframe id="resultFrame" width="300" height="120"></iframe>
+        <script>
+            function checkArmstrong()
+            {
+                var num = document.getElementById("number").value;
+                var result = "";
+                if (num === "" || isNaN(num))
+                {
+                    result = "<p>That is not a number!</p>";
+                }
+                else
+                {
+                    num = Number(num);
+                    var sum = 0;
+                    var temp = num;
+                    var digits = num.toString().length;
+                    while (temp > 0)
+                    {
+                        var digit = temp % 10;
+                        sum += Math.pow(digit, digits);
+                        temp = Math.floor(temp / 10);
+                    }
+                    if (sum === num)
+                    {
+                        result = "<p>" + num + " is an Armstrong number</p>";
+                    }
+                    else
+                    {
+                        result = "<p>" + num + " is NOT an Armstrong number</p>";
+                    }
+                }
+                var frame = document.getElementById("resultFrame");
+                frame.contentDocument.body.innerHTML = result;
+            }
+        </script>
+    </body>
+</html>

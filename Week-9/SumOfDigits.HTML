@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sum of Digits</title>
+    </head>
+    <body>
+        <h2>Find Sum of Digits</h2>
+        <p>Type one number:</p>
+        <input id="number" type="text">
+        <br><br>
+        <button onclick="sumDigits()">Find Sum</button>
+        <iframe id="resultFrame" width="300" height="120"></iframe>
+        <script>
+            function sumDigits()
+            {
+                var num = document.getElementById("number").value;
+                var result = "";
+                if (num === "" || isNaN(num))
+                {
+                    result = "<p>That is not a number!</p>";
+                }
+                else
+                {
+                    num = Number(num);
+                    var sum = 0;
+                    var temp = num;
+                    while (temp > 0)
+                    {
+                        var digit = temp % 10;
+                        sum = sum + digit;
+                        temp = Math.floor(temp / 10);
+                    }
+                    result = "<p>Sum of digits of " + num + " is " + sum + "</p>";
+                }
+                var frame = document.getElementById("resultFrame");
+                frame.contentDocument.body.innerHTML = result;
+            }
+        </script>
+    </body>
+</html>

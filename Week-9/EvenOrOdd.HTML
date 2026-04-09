@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Even or Odd Checker</title>
+    </head>
+    <body>
+        <h2>Check Even or Odd</h2>
+        <p>Type one number:</p>
+        <input id="number" type="text">
+        <br><br>
+        <button onclick="checkNumber()">Check</button>
+        <iframe id="resultFrame" width="300" height="100"></iframe>
+        <script>
+            function checkNumber()
+            {
+                var num = document.getElementById("number").value;
+                var result="";
+                if (num === "" || isNaN(num))
+                {
+                    result="<p> That is not a number!</p>";
+                }
+                else if (num%2 === 0)
+                {
+                    result = "<p>"+num+" is Even</p>";
+                }
+                else
+                {
+                    result = "<p>"+num+" is Odd</p>";
+                }
+                document.getElementById("resultFrame").contentDocument.body.innerHTML=result;
+            }
+        </script>
+    </body>
+</html>

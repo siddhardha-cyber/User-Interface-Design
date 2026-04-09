@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Factorial Finder</title>
+    </head>
+    <body>
+        <h2>Find Factorial</h2>
+        <p>Type one number:</p>
+        <input id="number" type="text">
+        <br><br>
+        <button onclick="findFactorial()">Find Factorial</button>
+        <iframe id="resultFrame" width="300" height="120"></iframe>
+        <script>
+            function findFactorial()
+            {
+                var num = document.getElementById("number").value;
+                var result = "";
+                if (num === "" || isNaN(num))
+                {
+                    result = "<p>That is not a number!</p>";
+                }
+                else
+                {
+                    num = Number(num);
+                    if (num < 0)
+                    {
+                        result = "<p>Factorial is not defined for negative numbers.</p>";
+                    }
+                    else
+                    {
+                        var fact = 1;
+                        for (var i = 1; i <= num; i++)
+                        {
+                            fact = fact * i;
+                        }
+
+                        result = "<p>Factorial of " + num + " is " + fact + "</p>";
+                    }
+                }
+                var frame = document.getElementById("resultFrame");
+                frame.contentDocument.body.innerHTML = result;
+            }
+        </script>
+    </body>
+</html>

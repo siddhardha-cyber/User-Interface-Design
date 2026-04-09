@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pattern Printing</title>
+    </head>
+    <body>
+        <h2>Print Patterns</h2>
+        <button onclick="printPatterns()">Show Patterns</button>
+        <iframe id="resultFrame" width="300" height="250"></iframe>
+        <script>
+            function printPatterns()
+            {
+                var result = "<h3>Patterns:</h3>";
+                result += "<p>";
+                for (var i = 1; i <= 5; i++)
+                {
+                    for (var j = 1; j <= i; j++)
+                    {
+                        result += i;
+                    }
+                    result += "<br>";
+                }
+                result += "</p>";
+                result += "<p>";
+                for (var i = 5; i >= 1; i--)
+                {
+                    for (var j = i; j >= 1; j--)
+                    {
+                        result += j;
+                    }
+                    result += "<br>";
+                }
+                result += "</p>";
+                result += "<p>";
+                for (var i = 1; i <= 5; i++)
+                {
+                    for (var j = 1; j <= i; j++)
+                    {
+                        result += j;
+                    }
+                    result += "<br>";
+                }
+                result += "</p>";
+                var frame = document.getElementById("resultFrame");
+                frame.contentDocument.body.innerHTML = result;
+            }
+        </script>
+    </body>
+</html>
