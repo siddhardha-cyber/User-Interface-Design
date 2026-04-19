@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mobile Number Validation</title>
+    </head>
+    <body>
+        <h2>Enter Mobile Number</h2>
+        <input type="text" id="mobile" onblur="validateMobile()">
+        <p id="message"></p>
+        <script>
+            function validateMobile()
+            {
+                var mobile = document.getElementById("mobile").value;
+                var msg = "";
+                if (mobile.length === 10 && !isNaN(mobile))
+                {
+                    msg = "Valid mobile number.";
+                }
+                else
+                {
+                    msg = "Invalid mobile number! Must be exactly 10 digits.";
+                }
+                document.getElementById("message").innerHTML = msg;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Username Checker</title>
+    </head>
+    <body>
+        <h2>Enter Username</h2>
+        <input type="text" id="username" onkeyup="checkUsername()">
+        <p id="message"></p>
+        <script>
+            function checkUsername()
+            {
+                var user = document.getElementById("username").value;
+                var msg = "";
+                if (user.length < 5)
+                {
+                    msg = "Username must be at least 5 characters long.";
+                }
+                else
+                {
+                    msg = "Username length is okay.";
+                }
+                document.getElementById("message").innerHTML = msg;
+            }
+        </script>
+    </body>
+</html>

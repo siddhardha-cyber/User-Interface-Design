@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Form</title>
+    </head>
+    <body>
+        <h2>Registration Form</h2>
+        <form onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name">
+            <p id="nameMsg"></p>
+            <br><br>
+            <label for="email">Email:</label>
+            <input type="text" id="email">
+            <p id="emailMsg"></p>
+            <br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password">
+            <p id="passMsg"></p>
+            <br><br>
+            <input type="submit" value="Register">
+        </form>
+        <script>
+            function validateForm()
+            {
+                var name = document.getElementById("name").value;
+                var email = document.getElementById("email").value;
+                var password = document.getElementById("password").value;
+                var valid = true;
+                if (name === "")
+                {
+                    document.getElementById("nameMsg").innerHTML = "Name cannot be empty.";
+                    valid = false;
+                }
+                else
+                {
+                    document.getElementById("nameMsg").innerHTML = "";
+                }
+                var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+                if (!email.match(pattern))
+                {
+                    document.getElementById("emailMsg").innerHTML = "Invalid email format.";
+                    valid = false;
+                }
+                else
+                {
+                    document.getElementById("emailMsg").innerHTML = "";
+                }
+                if (password.length < 6)
+                {
+                    document.getElementById("passMsg").innerHTML = "Password must be at least 6 characters.";
+                    valid = false;
+                }
+                else
+                {
+                    document.getElementById("passMsg").innerHTML = "";
+                }
+                return valid;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Form</title>
+    </head>
+    <body>
+        <h2>Registration Form</h2>
+        <form onsubmit="return validateEmail()">
+            <label for="email">Email:</label>
+            <input type="text" id="email">
+            <p id="message"></p>
+            <br><br>
+            <input type="submit" value="Register">
+        </form>
+        <script>
+            function validateEmail()
+            {
+                var email = document.getElementById("email").value;
+                var msg = "";
+                var pattern = /[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}/;
+                if (!email.match(pattern))
+                {
+                    msg = "Invalid email format!";
+                    document.getElementById("message").innerHTML = msg;
+                    return false;
+                }
+                else
+                {
+                    msg = "Email format looks good.";
+                    document.getElementById("message").innerHTML = msg;
+                    return true;
+                }
+            }
+        </script>
+    </body>
+</html>
