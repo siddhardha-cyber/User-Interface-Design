@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Largest of five numbers</title>
+    </head>
+    <body>
+        <h1>Finding the Largest of Five Numbers</h1>
+        <label for="num1">Number 1:</label>
+        <input type="number" id="num1"><br><br>
+        <label for="num2">Number 2:</label>
+        <input type="number" id="num2"><br><br>
+        <label for="num3">Number 3:</label>
+        <input type="number" id="num3"><br><br>
+        <label for="num4">Number 4:</label>
+        <input type="number" id="num4"><br><br>
+        <label for="num5">Number 5:</label>
+        <input type="number" id="num5"><br><br>
+        <button onclick="findLargest()">Find Largest</button>
+        <script>
+            function Largest(numbers)
+            {
+                numbers.Largest = numbers[0];
+                for (var i = 1; i < numbers.length; i++)                
+                {
+                    if (numbers[i] > numbers.Largest)
+                    {
+                        numbers.Largest = numbers[i];
+                    }
+                }                
+                alert("The largest number is: " + numbers.Largest);
+            }
+            function findLargest()
+            {
+                var num1 = parseFloat(document.getElementById("num1").value);
+                var num2 = parseFloat(document.getElementById("num2").value);
+                var num3 = parseFloat(document.getElementById("num3").value);
+                var num4 = parseFloat(document.getElementById("num4").value);
+                var num5 = parseFloat(document.getElementById("num5").value);
+                var numbers = [num1, num2, num3, num4, num5];
+                Largest(numbers);
+            }
+        </script>
+    </body>
+</html>

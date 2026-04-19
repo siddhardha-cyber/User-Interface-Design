@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Average marks of a student</title>
+    </head>
+    <body>
+        <h1>Average marks of a student</h1>
+        <label for="sub1">Subject 1:</label>
+        <input type="number" id="sub1" name="sub1"><br><br>
+        <label for="sub2">Subject 2:</label>
+        <input type="number" id="sub2" name="sub2"><br><br>
+        <label for="sub3">Subject 3:</label>
+        <input type="number" id="sub3" name="sub3"><br><br>
+        <label for="sub4">Subject 4:</label>
+        <input type="number" id="sub4" name="sub4"><br><br>
+        <label for="sub5">Subject 5:</label>
+        <input type="number" id="sub5" name="sub5"><br><br>
+        <label for="sub6">Subject 6:</label>
+        <input type="number" id="sub6" name="sub6"><br><br>
+        <p id="result"></p>
+        <p id="grade"></p>
+        <button onclick="GradeAndAverage()">Calculate Average and Grade</button>
+        <script>
+            function GradeAndAverage()
+            {
+                var sub1 = parseFloat(document.getElementById("sub1").value);
+                var sub2 = parseFloat(document.getElementById("sub2").value);
+                var sub3 = parseFloat(document.getElementById("sub3").value);
+                var sub4 = parseFloat(document.getElementById("sub4").value);
+                var sub5 = parseFloat(document.getElementById("sub5").value);
+                var sub6 = parseFloat(document.getElementById("sub6").value);
+                var average = (sub1 + sub2 + sub3 + sub4 + sub5 + sub6) / 6;
+                document.getElementById("result").innerHTML = "Average: " + average.toFixed(2);
+                let gradeResult = grade(average);
+                document.getElementById("grade").innerHTML = "Grade: " + gradeResult;
+            }
+            function grade(average)
+            {
+                if (average === 100)
+                {
+                    return "A";
+                }
+                else if (average >= 90)
+                {
+                    return "B";
+                }
+                else if (average >= 80)
+                {
+                    return "C";
+                }
+                else if (average >= 70)
+                {
+                    return "D";
+                }
+                else
+                {
+                    return "F";
+                }
+            }
+        </script>
+    </body>
+</html>

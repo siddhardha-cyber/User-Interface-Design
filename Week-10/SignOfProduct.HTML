@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign of product of three numbers</title>
+    </head>
+    <body>
+        <h1>Sign of product of three numbers</h1>
+        <label for="a">First Number</label>
+        <input type="number" id="a"><br><br>
+        <label for="a">Second Number</label>
+        <input type="number" id="b"><br><br>
+        <label for="a">Third Number</label>
+        <input type="number" id="c"><br><br>
+        <button onclick="calculateSign()">Calculate Sign</button>
+        <script>
+            function signOfProduct(a, b, c) {
+                if (a === 0 || b === 0 || c === 0)
+                {
+                    return "The product is zero.";
+                }
+                let negativeCount = 0;
+                if (a < 0)
+                {
+                    negativeCount++;
+                }                       
+                if (b < 0)
+                {
+                    negativeCount++;
+                }
+                if (c < 0)
+                {
+                    negativeCount++;
+                }
+                return negativeCount % 2 === 0 ? "The sign is plus (+)" : "The sign is minus (-)";
+            }
+            function calculateSign()
+            {
+                let a = parseFloat(document.getElementById("a").value);
+                let b = parseFloat(document.getElementById("b").value);
+                let c = parseFloat(document.getElementById("c").value);
+                alert(signOfProduct(a, b, c));
+            }
+        </script>
+    </body>
+</html>
