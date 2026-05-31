@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            MovieHub
+        </div>
+
+        <input
+            type="text"
+            id="searchBox"
+            placeholder="Search Movies..."
+        >
+
+        <button class="signin-btn">
+            Sign In
+        </button>
+
+    </nav>
+    <!-- Category Bar -->
+
+<div class="category-bar">
+
+    <div class="left-menu">
+        <a href="#">Movies</a>
+        <a href="#">Stream</a>
+        <a href="#">Events</a>
+        <a href="#">Plays</a>
+        <a href="#">Sports</a>
+        <a href="#">Activities</a>
+    </div>
+
+    <div class="right-menu">
+        <a href="#">ListYourShow</a>
+        <a href="#">Corporates</a>
+        <a href="#">Offers</a>
+        <a href="#">Gift Cards</a>
+    </div>
+
+</div>
+
+    <!-- Banner -->
+
+    <section class="banner">
+
+        <div class="banner-content">
+
+            <h1>Book Tickets For Latest Movies</h1>
+
+            <p>
+                Easy Booking • Best Seats • Instant Confirmation
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Home Page -->
+
+    <section id="homePage">
+
+        <h2 class="section-title">
+            Recommended Movies
+        </h2>
+
+        <div class="movie-container">
+
+            <div class="movie-card">
+
+                <img
+                    src="images/avengers.jpg"
+                    alt="Avengers"
+                >
+
+                <h3>Avengers</h3>
+
+                <p>Action | ⭐ 8.5</p>
+
+                <button
+                    onclick="bookMovie('Avengers')"
+                >
+                    Book Tickets
+                </button>
+
+            </div>
+
+            <div class="movie-card">
+
+                <img
+                    src="images/interstellar.jpg"
+                    alt="Interstellar"
+                >
+
+                <h3>Interstellar</h3>
+
+                <p>Sci-Fi | ⭐ 9.0</p>
+
+                <button
+                    onclick="bookMovie('Interstellar')"
+                >
+                    Book Tickets
+                </button>
+
+            </div>
+
+            <div class="movie-card">
+
+                <img
+                    src="images/joker.jpg"
+                    alt="Joker"
+                >
+
+                <h3>Joker</h3>
+
+                <p>Drama | ⭐ 8.4</p>
+
+                <button
+                    onclick="bookMovie('Joker')"
+                >
+                    Book Tickets
+                </button>
+
+            </div>
+
+            <div class="movie-card">
+
+                <img
+                    src="images/avatar.jpg"
+                    alt="Avatar"
+                >
+
+                <h3>Avatar</h3>
+
+                <p>Adventure | ⭐ 8.7</p>
+
+                <button
+                    onclick="bookMovie('Avatar')"
+                >
+                    Book Tickets
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Time Selection Page -->
+
+    <section
+        id="timePage"
+        style="display:none"
+    >
+
+        <div class="box">
+
+            <h2 id="selectedMovie">
+                Movie Name
+            </h2>
+
+            <h3>Select Show Time</h3>
+
+            <div class="time-container">
+
+                <button
+                    class="time-btn"
+                    onclick="selectTime('10:00 AM', this)">
+                    10:00 AM
+                </button>
+
+                <button
+                    class="time-btn"
+                    onclick="selectTime('2:00 PM', this)">
+                2:00 PM
+                </button>
+
+                <button
+                    class="time-btn"
+                    onclick="selectTime('6:00 PM', this)">
+                    6:00 PM
+                </button>
+
+                <button
+                    class="time-btn"
+                    onclick="selectTime('10:00 PM', this)">
+                    10:00 PM
+                </button>
+
+            </div>
+
+            <button
+                class="continue-btn"
+                onclick="goToSeats()"
+            >
+                Continue
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- Seat Selection Page -->
+
+    <section
+        id="seatPage"
+        style="display:none"
+    >
+
+        <h2>
+            Select Seats
+        </h2>
+
+        <div class="screen">
+            SCREEN
+        </div>
+
+        <div id="seatContainer">
+
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+
+        </div>
+
+        <div class="summary">
+
+            <h3>Booking Summary</h3>
+
+            <p>
+                Movie:
+                <span id="summaryMovie">
+                    -
+                </span>
+            </p>
+
+            <p>
+                Time:
+                <span id="summaryTime">
+                    -
+                </span>
+            </p>
+
+            <p>
+                Seats:
+                <span id="seatCount">
+                    0
+                </span>
+            </p>
+
+            <p>
+                Total:
+                ₹<span id="totalPrice">
+                    0
+                </span>
+            </p>
+
+            <button
+                id="confirmBtn"
+            >
+                Confirm Booking
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- Success Page -->
+
+    <section
+        id="successPage"
+        style="display:none"
+    >
+
+        <div class="success-box">
+
+            <h1>
+                Booking Successful 🎉
+            </h1>
+
+            <p id="successMessage">
+            </p>
+
+            <button
+                onclick="location.reload()"
+            >
+                Book Another Movie
+            </button>
+
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
